@@ -1,0 +1,5 @@
+1:所有类都要放到Application类同级或者下级目录中
+2:pobj字段名要么和必须和表名一样，让他自动去设置，要么必须用@Results设置对应关系
+3:@ExceptionHandler返回值要用@ResponseBody处理
+4:拦截器的.addPathPatterns("/**")，必须要两个*，1个*不起作用
+5:如果在拦截器的prehandler里面返回false，则相当于过滤掉了整个请求，不会给客户端返回值，所以可以采用抛出异常的方式给客户顿返回值。
